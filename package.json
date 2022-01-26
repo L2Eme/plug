@@ -1,0 +1,13 @@
+{
+  "name": "@line100/plug",
+  "version": "1.0.0",
+  "description": "Clojure plug implementation in Javascript.",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "repository": "git@github.com:L2Eme/plug.git",
+  "author": "L2Eme <yume.site@outlook.com>",
+  "license": "MIT",
+  "peerDependencies": {}
+}
