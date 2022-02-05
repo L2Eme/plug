@@ -11,7 +11,7 @@
   "author": "L2Eme <yume.site@outlook.com>",
   "license": "MIT",
   "exports": {
-    ".": "index.js"
+    ".": "./index.js"
   },
   "files": [
     "index.d.ts",
