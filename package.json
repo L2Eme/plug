@@ -1,6 +1,6 @@
 {
   "name": "@line100/plug",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Clojure plug implementation in Javascript.",
   "publishConfig": {
     "access": "public"
