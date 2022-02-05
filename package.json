@@ -6,8 +6,20 @@
     "access": "public"
   },
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": "git@github.com:L2Eme/plug.git",
   "author": "L2Eme <yume.site@outlook.com>",
   "license": "MIT",
-  "peerDependencies": {}
+  "exports": {
+    ".": "index.js"
+  },
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "index.ts",
+    "CHANGELOG.md",
+    "README.md",
+    "package.json",
+    "tsconfig.json"
+  ]
 }
