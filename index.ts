@@ -8,7 +8,7 @@
  * 
  * 但是在具体过程中，可以定义其他类型作为编写时的辅助。
  */
-export type THandler = (this: any, action: any) => any
+export type THandler = (action: any) => any
 
 /**
  * 是一种monad.
@@ -32,13 +32,13 @@ export type TPlug<T> = (this: T, handler: THandler) => THandler
  * 
  * @param context context among plugs
  * @param plugs plugs list
- * @param rootHandler 
+ * @param rootHandler default is v => v
  * @returns 
  */
 export function createHandler<T>(context: T | null, plugs: TPlug<T>[], rootHandler?: THandler) {
 	return plugs.reduceRight(
 		(h, p) => (p as any).bind(context)(h),
-		(rootHandler?.bind(context) ?? (() => { })) as any,
+		(rootHandler ?? ((v: any) => v)) as any,
 	);
 }
 

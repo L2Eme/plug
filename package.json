@@ -1,31 +1,41 @@
 {
   "name": "@line100/plug",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Clojure plug implementation in Javascript.",
   "publishConfig": {
     "access": "public"
   },
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
   "sideEffects": false,
   "repository": "https://github.com/L2Eme/plug",
   "author": "L2Eme <yume.site@outlook.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc && tsc -b tsconfig.esm.json"
+  },
   "keywords": [
     "plugin",
     "ES6"
   ],
+  "typesVersions": {
+    ">=4.2": {
+      "*": [
+        "dist/esm/*"
+      ]
+    }
+  },
   "exports": {
     ".": {
       "require": "./dist/cjs/index.js",
       "import": "./dist/esm/index.js"
+    },
+    "./*": {
+      "require": "./dist/cjs/*.js",
+      "import": "./dist/esm/*.js"
     }
   },
   "files": [
     "dist/esm/*",
     "dist/cjs/*",
-    "index.ts",
     "CHANGELOG.md",
     "README.md",
     "package.json",
